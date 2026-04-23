@@ -52,18 +52,22 @@ const HomePage = () => {
           background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.08) 0%, transparent 70%)",
         }} />
 
-        {/* block-centred content — no flex, just text-align:center */}
+        {/* flex-column centred content */}
         <div style={{
           position: "relative", zIndex: 1,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           textAlign: "center",
           padding: "72px 48px 56px",
+          gap: "0px",
         }}>
-          <span className="eyebrow" style={{ marginBottom: "20px", display: "inline-flex" }}>
+          <span className="eyebrow" style={{ marginBottom: "20px" }}>
             {TEAM_SUBTITLE}
           </span>
 
           <h1 style={{
-            margin: "16px 0",
+            margin: "0 0 16px",
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: "clamp(3rem, 8vw, 8rem)",
             lineHeight: 0.92,
@@ -73,7 +77,7 @@ const HomePage = () => {
           }}>{TEAM_NAME}</h1>
 
           <p style={{
-            margin: "0 auto 28px",
+            margin: "0 0 32px",
             color: "var(--text-secondary)",
             fontSize: "0.95rem",
             lineHeight: 1.7,
@@ -81,14 +85,14 @@ const HomePage = () => {
           }}>{TEAM_TAGLINE}</p>
 
           {/* buttons */}
-          <div style={{ display: "inline-flex", flexWrap: "wrap", gap: "14px", justifyContent: "center", marginBottom: "36px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", justifyContent: "center", marginBottom: "36px" }}>
             <Link className="button" to="/add-member">Add Member</Link>
             <Link className="button button--secondary" to="/view-members">View Team</Link>
           </div>
 
           {/* stats */}
           <div style={{
-            display: "inline-flex",
+            display: "flex",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: "12px",
             overflow: "hidden",
