@@ -15,6 +15,33 @@ Student Team Members Management Application built with React, Node.js, Express, 
 
 ---
 
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>🏠 Home Page</b><br/><br/>
+      <img src="docs/screenshots/home.png" alt="Home Page" width="100%"/>
+    </td>
+    <td align="center" width="50%">
+      <b>👥 View Members</b><br/><br/>
+      <img src="docs/screenshots/view-members.png" alt="View Members" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>➕ Add Member</b><br/><br/>
+      <img src="docs/screenshots/add-member.png" alt="Add Member" width="100%"/>
+    </td>
+    <td align="center" width="50%">
+      <b>🪪 Member Details</b><br/><br/>
+      <img src="docs/screenshots/member-details.png" alt="Member Details" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🔗 Live Dev Links
 
 | Service | URL |
