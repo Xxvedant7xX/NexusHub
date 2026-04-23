@@ -42,14 +42,21 @@ Student Team Members Management Application built with React, Node.js, Express, 
 
 ---
 
-## 🔗 Live Dev Links
+## 🌐 Live Production Links
+
+| Service | URL |
+|---------|-----|
+| **Frontend (Vercel)** | https://nexus-hub-lovat.vercel.app |
+| **Backend API (Render)** | https://nexushub-api-1aiz.onrender.com |
+| **Health check** | https://nexushub-api-1aiz.onrender.com/api/health |
+| **Members JSON** | https://nexushub-api-1aiz.onrender.com/api/members |
+
+## 💻 Local Dev Links
 
 | Service | URL |
 |---------|-----|
 | **Frontend** | http://localhost:5173 |
 | **Backend API** | http://localhost:5000 |
-| **Health check** | http://localhost:5000/api/health |
-| **Members JSON** | http://localhost:5000/api/members |
 
 > **Note:** If port 5173 is already in use, Vite will automatically increment to the next available port (e.g. `http://localhost:5174`). Check the terminal output for the exact URL after running `npm run dev`.
 
