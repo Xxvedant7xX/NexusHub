@@ -62,7 +62,7 @@ const ViewMembersPage = () => {
       <SectionHeader
         eyebrow="View Members"
         title="Meet our amazing team."
-        description="This page keeps the assignment’s card-based member list, then improves it with search, filters, and richer card content."
+        description="Search, filter, and browse every member on the NexusHub roster. Click any card to see the full profile."
         align="center"
       />
 

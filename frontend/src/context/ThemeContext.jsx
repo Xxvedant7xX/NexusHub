@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext(null);
-const storageKey = "birds-in-the-trap-theme";
+const storageKey = "nexushub-theme";
 
 const getInitialTheme = () => {
   if (typeof window === "undefined") {

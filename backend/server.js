@@ -14,7 +14,7 @@ const startServer = async () => {
 
   app.listen(PORT, HOST, () => {
     console.log(
-      `Birds in the TRAP API running on http://${HOST}:${PORT} (${getStorageModeLabel()})`,
+      `NexusHub API running on http://${HOST}:${PORT} (${getStorageModeLabel()})`,
     );
   });
 };

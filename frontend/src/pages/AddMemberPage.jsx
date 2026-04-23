@@ -125,7 +125,7 @@ const AddMemberPage = () => {
       <SectionHeader
         eyebrow="Add Member"
         title="Create a new profile with image upload."
-        description="This page follows the assignment form flow, then improves it with live validation, file preview, and clearer spacing."
+        description="Fill out the form to create a new NexusHub team member profile with live validation, image preview, and instant feedback."
       />
 
       <div className="form-layout">
@@ -335,7 +335,7 @@ const AddMemberPage = () => {
               </div>
 
               <div className="preview-copy">
-                <span className="eyebrow">Birds in the TRAP</span>
+                <span className="eyebrow">NexusHub</span>
                 <h3>{formValues.name || "Future Team Member"}</h3>
                 <p>{formValues.role || "Role will appear here"}</p>
                 <div className="member-card__meta">
@@ -350,7 +350,7 @@ const AddMemberPage = () => {
             <SectionHeader
               eyebrow="Suggested names"
               title="Theme-friendly member ideas"
-              description="These are pre-seeded in the backend so the app feels complete immediately."
+              description="These are the NexusHub team members. Click any name to auto-fill the name field."
             />
 
             <div className="name-chip-grid">

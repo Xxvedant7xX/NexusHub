@@ -8,7 +8,7 @@ const MemberCard = ({ member }) => (
 
     <div className="member-card__body">
       <div>
-        <span className="eyebrow">Birds in the TRAP</span>
+        <span className="eyebrow">NexusHub</span>
         <h3>{member.name}</h3>
         <p className="member-card__role">{member.role}</p>
       </div>

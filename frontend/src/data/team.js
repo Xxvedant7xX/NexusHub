@@ -1,18 +1,18 @@
-export const TEAM_NAME = "Birds in the TRAP";
+export const TEAM_NAME = "NexusHub";
 export const TEAM_SUBTITLE = "Student Team Members Management Application";
 export const TEAM_TAGLINE =
-  "A polished full-stack team dashboard inspired by the assignment screenshots, rebuilt with liquid-glass styling, strong typography, and a responsive dark mode.";
+  "A polished full-stack team dashboard with liquid-glass styling, real-time member management, dark mode support, and a clean modern interface.";
 
 export const FEATURE_HIGHLIGHTS = [
   {
-    title: "PDF-aligned page flow",
+    title: "Complete CRUD member flow",
     description:
-      "The app includes the exact four requested screens: Home, Add Member, View Members, and Member Details.",
+      "Add, browse, and view full profiles — four polished pages with smooth routing and reactive state management.",
   },
   {
     title: "Image upload support",
     description:
-      "The form sends `multipart/form-data` to the backend and stores uploaded files in the server uploads folder.",
+      "The form sends multipart/form-data to the backend and stores uploaded files in the server uploads folder.",
   },
   {
     title: "Dark and light modes",
@@ -22,13 +22,13 @@ export const FEATURE_HIGHLIGHTS = [
 ];
 
 export const MEMBER_NAME_SUGGESTIONS = [
-  "Kanye West",
-  "Drake",
-  "Linus Torvalds",
-  "Cristiano Ronaldo",
-  "Elon Musk",
-  "Keanu Reeves",
-  "Travis Scott",
+  "Aryan Mehta",
+  "Priya Sharma",
+  "Rohan Iyer",
+  "Ananya Patel",
+  "Karan Verma",
+  "Neha Joshi",
+  "Vikram Nair",
 ];
 
 export const FORM_DEFAULTS = {

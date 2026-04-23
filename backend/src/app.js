@@ -25,7 +25,7 @@ app.use("/uploads", express.static(uploadsDirectory));
 
 app.get("/api/health", (_request, response) => {
   response.json({
-    message: "Birds in the TRAP backend is healthy.",
+    message: "NexusHub backend is healthy.",
     timestamp: new Date().toISOString(),
   });
 });

@@ -7,7 +7,7 @@ import ThemeToggle from "./ThemeToggle.jsx";
 const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/add-member", label: "Add Member" },
-  { to: "/view-members", label: "View Members" },
+  { to: "/view-members", label: "Team" },
 ];
 
 const AppLayout = () => {
@@ -15,19 +15,11 @@ const AppLayout = () => {
 
   return (
     <div className="app-shell">
-      <div className="ambient-orb ambient-orb--one" />
-      <div className="ambient-orb ambient-orb--two" />
-      <div className="ambient-orb ambient-orb--three" />
-
-      <header className="glass-panel topbar">
+      <header className="topbar">
         <div className="brand-block">
-          <span className="brand-kicker">Team Dashboard</span>
           <div className="brand-row">
-            <span className="brand-mark">B</span>
-            <div>
-              <h1>{TEAM_NAME}</h1>
-              <p>{theme === "dark" ? "Liquid Glass Dark" : "Liquid Glass Light"}</p>
-            </div>
+            <h1>{TEAM_NAME}</h1>
+            <p>{theme === "dark" ? "dark" : "light"}</p>
           </div>
         </div>
 
@@ -57,8 +49,7 @@ const AppLayout = () => {
 
       <footer className="footer-note">
         <p>
-          Built for the FSD online assessment with React Router, Express APIs, file uploads,
-          seeded demo members, and responsive premium styling.
+          Built with React, Express, MongoDB &mdash; NexusHub.
         </p>
       </footer>
     </div>

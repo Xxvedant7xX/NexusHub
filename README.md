@@ -1,203 +1,241 @@
-# Birds in the TRAP
+# NexusHub
 
-Student Team Members Management Application built for the Full Stack Development group assessment.
+Student Team Members Management Application built with React, Node.js, Express, and MongoDB.
 
-This project follows the PDF brief page by page, then upgrades the interface with:
+```
+ ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗██╗  ██╗██╗   ██╗██████╗
+ ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝██║  ██║██║   ██║██╔══██╗
+ ██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗███████║██║   ██║██████╔╝
+ ██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║██╔══██║██║   ██║██╔══██╗
+ ██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║██║  ██║╚██████╔╝██████╔╝
+ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝
+```
 
-- React Router-based navigation for all required pages
-- Express API with image upload support
-- MongoDB-ready backend with a zero-setup demo JSON fallback
-- Apple liquid glass inspired UI treatment
-- Light and dark modes
-- Seeded team members using the requested notable male names
-- A DARKMAN display-font setup with premium fallbacks for the hero typography
+> Course: 21CSS301T – Full Stack Development | Assessment: CLAT-2 | Batch: 2024
 
-## Screenshots
+---
 
-| Dark Home | Light Add Member |
-| --- | --- |
-| ![Dark mode home screen](docs/screenshots/home-dark.png) | ![Light mode add member screen](docs/screenshots/add-light.png) |
+## Features
 
-| Dark View Members | Light Member Details |
-| --- | --- |
-| ![Dark mode members page](docs/screenshots/members-dark.png) | ![Light mode member details page](docs/screenshots/details-light.png) |
+- **4 Pages** — Home, Add Member, View Team, Member Details
+- **Liquid Glass UI** — Gold-accent dark/light design system with `backdrop-filter` blur cards
+- **Bebas Neue** display font · **DM Sans** body · **JetBrains Mono** labels
+- **Dark / Light Mode** — Persistent via `localStorage` + `data-theme` attribute
+- **Image Upload** — Multipart form upload stored in `backend/uploads/`
+- **Form Validation** — Required fields, real-time error display
+- **Auto-seed** — 7 NexusHub team members seeded automatically on first launch
+- **Horizontal roster scroll** — Members strip on home page scrolls left/right
+- **Responsive** — Works on mobile, tablet, and desktop
 
-If you want to refresh the README screenshots later, replace the files inside `docs/screenshots/` with the same names:
+---
 
-- `home-dark.png`
-- `add-light.png`
-- `members-dark.png`
-- `details-light.png`
+## Team
 
-## What is included
+| # | Name | Role |
+|---|------|------|
+| 1 | Aryan Mehta | Creative Director |
+| 2 | Priya Sharma | Community Strategist |
+| 3 | Rohan Iyer | Systems Architect |
+| 4 | Ananya Patel | Performance Lead |
+| 5 | Karan Verma | Product Visionary |
+| 6 | Neha Joshi | Experience Curator |
+| 7 | Vikram Nair | Visual Experience Lead |
 
-- Home Page
-  Shows the team name, intro copy, primary navigation, and live member stats.
-- Add Member Page
-  Includes validation, image upload, preview card, and Axios `POST` submission.
-- View Members Page
-  Fetches members from the backend and shows them in responsive cards with search and role filters.
-- Member Details Page
-  Fetches one member by ID and renders the full profile view.
-- Backend API
-  Supports listing members, fetching one member, uploading a new member, and serving profile images.
-
-## Team Setup
-
-- Team name: `Birds in the TRAP`
-- Seeded members:
-  Kanye West, Drake, Linus Torvalds, Cristiano Ronaldo, Elon Musk, Keanu Reeves, Travis Scott
+---
 
 ## Tech Stack
 
 | Layer | Tools |
-| --- | --- |
-| Frontend | React, React Router, Axios, Vite |
+|-------|-------|
+| Frontend | React 18, React Router v6, Axios, Vite |
+| Styling | Custom CSS — Bebas Neue, DM Sans, JetBrains Mono, gold accent design system |
 | Backend | Node.js, Express, Multer |
-| Database | MongoDB with Mongoose support |
-| Fallback storage | Local JSON file for quick demo mode |
-| Styling | Custom CSS, glassmorphism, dark/light theming |
+| Database | MongoDB + Mongoose (with JSON fallback for zero-setup demo) |
+| Dev tooling | Concurrently, Nodemon, ESLint |
+
+---
 
 ## Project Structure
 
 ```text
 FSD_assignment/
 ├── backend/
-│   ├── data/
+│   ├── data/                   # JSON fallback storage
 │   ├── src/
-│   │   ├── controllers/
-│   │   ├── data/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── store/
-│   │   └── utils/
-│   ├── uploads/
+│   │   ├── controllers/        # listMembers, getMemberDetails, addMember
+│   │   ├── data/               # sampleMembers.js (seed data)
+│   │   ├── models/             # Mongoose Member schema
+│   │   ├── routes/             # /api/members routes
+│   │   ├── store/              # memberStore.js (JSON + MongoDB)
+│   │   └── utils/              # serialization, validation, paths
+│   ├── uploads/                # Seeded SVG avatars
+│   │   └── runtime/            # User-uploaded images
 │   ├── .env.example
 │   └── server.js
-├── docs/
-│   └── screenshots/
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── data/
-│   │   ├── lib/
-│   │   ├── pages/
-│   │   └── styles/
+│   │   ├── components/         # AppLayout, MemberCard, ThemeToggle, etc.
+│   │   ├── context/            # ThemeContext
+│   │   ├── data/               # team.js (constants)
+│   │   ├── lib/                # api.js (Axios)
+│   │   ├── pages/              # Home, AddMember, ViewMembers, MemberDetails, NotFound
+│   │   └── styles/             # app.css (complete design system)
 │   ├── index.html
 │   └── vite.config.js
-├── package.json
+├── package.json                # Root scripts (concurrently)
 └── README.md
 ```
 
-## Routes
+---
 
-### Frontend pages
+## API Reference
 
-- `/`
-- `/add-member`
-- `/view-members`
-- `/member/:id`
+Base URL: `http://localhost:5000`
 
-### Backend APIs
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/health` | Health check — returns `"NexusHub backend is healthy."` |
+| `GET` | `/api/members` | List all members |
+| `GET` | `/api/members/:id` | Get one member by ID |
+| `POST` | `/api/members` | Create a member (multipart/form-data) |
+| `GET` | `/uploads/:filename` | Serve uploaded profile images |
 
-- `GET /api/health`
-- `GET /api/members`
-- `GET /api/members/:id`
-- `POST /api/members`
+### Sample POST body (form-data)
 
-Legacy aliases are also available under `/members` on the backend for brief compatibility and browser testing.
+```
+name         → Aryan Mehta
+rollNumber   → NXH-001
+year         → 2026
+degree       → B.Tech - Experience Design
+role         → Creative Director
+email        → aryan@nexushub.team
+phone        → +91 90000 11001
+aboutProject → Shapes the visual language for NexusHub.
+hobbies      → UI design, typography, concept sketches
+certificate  → Creative Strategy Lab
+internship   → Zeta Design Studio
+aboutAim     → Merge bold design with unforgettable branding.
+image        → [file upload]
+```
 
-## How to run
+### Sample JSON response
 
-### 1. Install dependencies
+```json
+{
+  "id": "demo-xxxxxxxx",
+  "name": "Aryan Mehta",
+  "role": "Creative Director",
+  "email": "aryan@nexushub.team",
+  "rollNumber": "NXH-001",
+  "year": "2026",
+  "degree": "B.Tech - Experience Design",
+  "imageUrl": "http://localhost:5000/uploads/aryan-mehta.svg",
+  "hobbies": ["UI design", "typography", "concept sketches"],
+  "createdAt": "2026-04-24T00:00:00.000Z"
+}
+```
 
-From the project root:
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18+
+- [MongoDB](https://www.mongodb.com/) (optional — app works without it using JSON fallback)
+
+### 1. Clone & install
 
 ```bash
+git clone <your-repo-url>
+cd FSD_assignment
 npm install
 npm install --prefix backend
 npm install --prefix frontend
 ```
 
-### 2. Configure the backend
-
-Create a backend env file from the sample:
+### 2. Configure backend
 
 ```bash
 cp backend/.env.example backend/.env
 ```
 
-Default values:
+Edit `backend/.env`:
 
 ```env
 HOST=127.0.0.1
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/birds-in-the-trap
+MONGO_URI=mongodb://127.0.0.1:27017/nexushub
 CLIENT_URL=http://127.0.0.1:5173
 AUTO_SEED=true
 ```
 
-### 3. Choose your storage mode
+> Leave `MONGO_URI` blank or remove it to use the zero-setup JSON fallback mode.
 
-- MongoDB mode:
-  Start MongoDB locally and keep `MONGO_URI` active in `backend/.env`
-- Demo mode:
-  Leave MongoDB unavailable and the app will automatically use `backend/data/demo-members.json`
-
-This fallback was added so the project still opens and works cleanly during review, while preserving proper MongoDB support for the actual assignment requirement.
-
-### 4. Start the app
-
-Run both servers together from the root:
+### 3. Run
 
 ```bash
+# Both servers together (recommended)
 npm run dev
+
+# Or separately
+npm run dev:backend
+npm run dev:frontend
 ```
 
-Or run them separately:
+### 4. Open
+
+| Service | URL |
+|---------|-----|
+| Frontend | http://127.0.0.1:5173 |
+| Backend API | http://127.0.0.1:5000 |
+| Health check | http://127.0.0.1:5000/api/health |
+| Members JSON | http://127.0.0.1:5000/api/members |
+
+---
+
+## Storage Modes
+
+| Mode | When | Notes |
+|------|------|-------|
+| **Demo JSON** | No MongoDB URI set, or MongoDB unreachable | Saves to `backend/data/demo-members.json`. Zero setup needed. |
+| **MongoDB** | Valid `MONGO_URI` in `.env` and MongoDB running | Full persistence via Mongoose |
+
+---
+
+## Seed Data
+
+Members are seeded automatically on first launch when `AUTO_SEED=true` (default).
+
+To force-reseed at any time:
 
 ```bash
-npm run dev --prefix backend
-npm run dev --prefix frontend
+npm run seed --prefix backend
 ```
 
-### 5. Open the app
+To reset the JSON demo data, delete `backend/data/demo-members.json` — it will be recreated on next server start.
 
-- Frontend: `http://127.0.0.1:5173`
-- Backend: `http://127.0.0.1:5000`
-- Members API test: `http://127.0.0.1:5000/api/members`
-
-## Seed data
-
-To reset the seeded members:
-
-```bash
-npm run seed
-```
-
-## Build the frontend
-
-```bash
-npm run build
-```
-
-The production-ready frontend output will be created in `frontend/dist`.
+---
 
 ## Notes
 
-- Uploaded files are stored inside `backend/uploads/runtime/`
-- Seed artwork lives inside `backend/uploads/`
-- The members page mirrors the PDF card-style output but adds search and filter controls
-- The interface supports `?theme=light` and `?theme=dark` in the URL, which is useful for screenshot capture or quick theme previews
+- Uploaded images are stored in `backend/uploads/runtime/`
+- Seed SVG avatars are stored in `backend/uploads/`
+- Theme persists via `localStorage` key `nexushub-theme`
+- URL query `?theme=light` or `?theme=dark` forces a theme for screenshots
+- Frontend proxies `/api` requests to the backend via Vite proxy config
 
-## Submission checklist
+---
 
-- Public GitHub repository
-- `.gitignore` included
-- `README.md` included
-- Frontend + backend folders present
-- API routes working
-- Image upload working
-- All required pages implemented
+## Checklist
 
+- [x] Public GitHub repository
+- [x] `.gitignore` included
+- [x] `README.md` updated
+- [x] Frontend + backend folders present
+- [x] All 4 required pages implemented
+- [x] API routes working (list, detail, create)
+- [x] Image upload working (multipart/form-data → `uploads/`)
+- [x] Auto-seed with 7 NexusHub members
+- [x] Dark / Light mode toggle
+- [x] Responsive layout

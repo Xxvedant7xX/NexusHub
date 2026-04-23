@@ -1,0 +1,18 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="48" fill="#080810"/>
+  <circle cx="500" cy="130" r="140" fill="url(#g0)" fill-opacity="0.72"/>
+  <circle cx="120" cy="520" r="180" fill="url(#g1)" fill-opacity="0.78"/>
+  <rect x="40" y="40" width="560" height="560" rx="40" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12"/>
+  <text x="56" y="146" fill="#d4a853" font-size="42" font-family="Avenir, Helvetica, Arial, sans-serif" letter-spacing="4">NEXUSHUB</text>
+  <text x="56" y="478" fill="white" font-size="186" font-weight="700" font-family="Avenir, Helvetica, Arial, sans-serif">PS</text>
+  <text x="56" y="548" fill="#f5f0e8" font-size="42" font-family="Avenir, Helvetica, Arial, sans-serif">Priya Sharma</text>
+  <text x="56" y="592" fill="#d4a853" font-size="28" font-family="Avenir, Helvetica, Arial, sans-serif">Community Strategist</text>
+  <defs>
+    <linearGradient id="g0" x1="360" y1="-14" x2="640" y2="270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff8a65"/><stop offset="1" stop-color="#ff6f91"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="-52" y1="340" x2="300" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffca7a"/><stop offset="1" stop-color="#ff8a65"/>
+    </linearGradient>
+  </defs>
+</svg>

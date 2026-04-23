@@ -121,8 +121,9 @@ const MemberDetailsPage = () => {
           <GlassPanel className="details-card">
             <h2>Profile Snapshot</h2>
             <p>
-              {member.name} contributes to Birds in the TRAP as the team’s {member.role.toLowerCase()}.
-              This profile matches the assignment requirement to show full member details on a dedicated page.
+              {member.name} is a core member of NexusHub, contributing as the team&apos;s{" "}
+              {member.role.toLowerCase()}. Explore the details below for a complete view of their
+              skills, goals, and project contributions.
             </p>
           </GlassPanel>
         </div>
