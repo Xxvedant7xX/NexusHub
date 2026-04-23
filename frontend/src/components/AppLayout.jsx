@@ -1,7 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 import { TEAM_NAME } from "../data/team.js";
-import { useTheme } from "../context/ThemeContext.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 
 const navItems = [
@@ -11,15 +10,12 @@ const navItems = [
 ];
 
 const AppLayout = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="app-shell">
       <header className="topbar">
         <div className="brand-block">
           <div className="brand-row">
             <h1>{TEAM_NAME}</h1>
-            <p>{theme === "dark" ? "dark" : "light"}</p>
           </div>
         </div>
 

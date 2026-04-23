@@ -11,7 +11,7 @@ Student Team Members Management Application built with React, Node.js, Express, 
  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝
 ```
 
-> Course: 21CSS301T – Full Stack Development | Assessment: CLAT-2 | Batch: 2024
+> Course: 21CSS301T – Full Stack Development | Assessment: CLAT-2 | Batch: 2023
 
 ---
 

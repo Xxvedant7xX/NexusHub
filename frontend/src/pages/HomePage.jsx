@@ -33,34 +33,93 @@ const HomePage = () => {
   const uniqueRoles = new Set(members.map((member) => member.role)).size;
 
   return (
-    <section className="home-page">
+    <section className="home-page" style={{ display: "block", width: "100%" }}>
 
-      {/* ── Hero – full width, centred ── */}
-      <GlassPanel className="hero-panel hero-copy">
-        <span className="eyebrow">{TEAM_SUBTITLE}</span>
-        <h1 className="display-title">{TEAM_NAME}</h1>
-        <p>{TEAM_TAGLINE}</p>
+      {/* ── Hero ── */}
+      <div style={{
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: "20px",
+        background: "rgba(255,255,255,0.04)",
+        border: "1px solid rgba(212,168,83,0.15)",
+        width: "100%",
+        boxSizing: "border-box",
+        marginBottom: "24px",
+      }}>
+        {/* ambient glow */}
+        <div aria-hidden="true" style={{
+          position: "absolute", inset: 0, pointerEvents: "none",
+          background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.08) 0%, transparent 70%)",
+        }} />
 
-        <div className="button-row">
-          <Link className="button" to="/add-member">Add Member</Link>
-          <Link className="button button--secondary" to="/view-members">View Team</Link>
+        {/* block-centred content — no flex, just text-align:center */}
+        <div style={{
+          position: "relative", zIndex: 1,
+          textAlign: "center",
+          padding: "72px 48px 56px",
+        }}>
+          <span className="eyebrow" style={{ marginBottom: "20px", display: "inline-flex" }}>
+            {TEAM_SUBTITLE}
+          </span>
+
+          <h1 style={{
+            margin: "16px 0",
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: "clamp(3rem, 8vw, 8rem)",
+            lineHeight: 0.92,
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
+            color: "var(--text-primary)",
+          }}>{TEAM_NAME}</h1>
+
+          <p style={{
+            margin: "0 auto 28px",
+            color: "var(--text-secondary)",
+            fontSize: "0.95rem",
+            lineHeight: 1.7,
+            maxWidth: "520px",
+          }}>{TEAM_TAGLINE}</p>
+
+          {/* buttons */}
+          <div style={{ display: "inline-flex", flexWrap: "wrap", gap: "14px", justifyContent: "center", marginBottom: "36px" }}>
+            <Link className="button" to="/add-member">Add Member</Link>
+            <Link className="button button--secondary" to="/view-members">View Team</Link>
+          </div>
+
+          {/* stats */}
+          <div style={{
+            display: "inline-flex",
+            border: "1px solid rgba(255,255,255,0.08)",
+            borderRadius: "12px",
+            overflow: "hidden",
+          }}>
+            {[
+              { label: "Total Members", value: isLoading ? "…" : members.length },
+              { label: "Roles Active",  value: isLoading ? "…" : uniqueRoles },
+              { label: "Pages",         value: 4 },
+            ].map(({ label, value }, i) => (
+              <div key={label} style={{
+                padding: "14px 32px",
+                borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.08)" : "none",
+              }}>
+                <span style={{
+                  display: "block", fontSize: "0.6rem",
+                  letterSpacing: "0.2em", textTransform: "uppercase",
+                  color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace",
+                  marginBottom: "4px",
+                }}>{label}</span>
+                <strong style={{
+                  display: "block",
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "2.4rem",
+                  color: "var(--accent-gold)",
+                  lineHeight: 1,
+                }}>{value}</strong>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className="stats-grid">
-          <div className="stat-card">
-            <span className="stat-card__label">Total Members</span>
-            <strong>{isLoading ? "…" : members.length}</strong>
-          </div>
-          <div className="stat-card">
-            <span className="stat-card__label">Roles Active</span>
-            <strong>{isLoading ? "…" : uniqueRoles}</strong>
-          </div>
-          <div className="stat-card">
-            <span className="stat-card__label">Pages</span>
-            <strong>4</strong>
-          </div>
-        </div>
-      </GlassPanel>
+      </div>
 
       {/* ── Features ── */}
       <GlassPanel className="feature-panel">
