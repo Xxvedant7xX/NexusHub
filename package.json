@@ -1,0 +1,16 @@
+{
+  "name": "birds-in-the-trap",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Student team members management application for Birds in the TRAP.",
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "seed": "npm run seed --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

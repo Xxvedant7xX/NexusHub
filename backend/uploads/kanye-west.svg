@@ -1,0 +1,20 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="48" fill="#0F172A"/>
+  <circle cx="492" cy="118" r="132" fill="url(#paint0_linear)" fill-opacity="0.78"/>
+  <circle cx="138" cy="532" r="190" fill="url(#paint1_linear)" fill-opacity="0.84"/>
+  <rect x="40" y="40" width="560" height="560" rx="40" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.24"/>
+  <text x="56" y="146" fill="white" font-size="46" font-family="Avenir, Helvetica, Arial, sans-serif" letter-spacing="4">BIRDS IN THE TRAP</text>
+  <text x="56" y="478" fill="white" font-size="186" font-weight="700" font-family="Avenir, Helvetica, Arial, sans-serif">KW</text>
+  <text x="56" y="548" fill="#E2E8F0" font-size="42" font-family="Avenir, Helvetica, Arial, sans-serif">Kanye West</text>
+  <text x="56" y="592" fill="#93C5FD" font-size="28" font-family="Avenir, Helvetica, Arial, sans-serif">Creative Director</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="360" y1="-14" x2="624" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="-52" y1="342" x2="328" y2="722" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+</svg>

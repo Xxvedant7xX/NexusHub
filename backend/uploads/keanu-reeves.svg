@@ -1,0 +1,20 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="48" fill="#231437"/>
+  <circle cx="126" cy="130" r="148" fill="url(#paint0_linear)" fill-opacity="0.84"/>
+  <circle cx="506" cy="516" r="188" fill="url(#paint1_linear)" fill-opacity="0.8"/>
+  <rect x="40" y="40" width="560" height="560" rx="40" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.2"/>
+  <text x="56" y="146" fill="white" font-size="46" font-family="Avenir, Helvetica, Arial, sans-serif" letter-spacing="4">BIRDS IN THE TRAP</text>
+  <text x="56" y="478" fill="white" font-size="172" font-weight="700" font-family="Avenir, Helvetica, Arial, sans-serif">KR</text>
+  <text x="56" y="548" fill="#FAF5FF" font-size="42" font-family="Avenir, Helvetica, Arial, sans-serif">Keanu Reeves</text>
+  <text x="56" y="592" fill="#D8B4FE" font-size="28" font-family="Avenir, Helvetica, Arial, sans-serif">Experience Curator</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="-22" y1="-18" x2="274" y2="278" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="318" y1="328" x2="694" y2="704" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5D0FE"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+</svg>
